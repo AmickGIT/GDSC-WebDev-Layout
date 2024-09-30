@@ -6,11 +6,12 @@
 
 html, body {
     height: 100%;
+    background-color: black;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns
+    
     
     /* Unequal row heights */
     grid-template-rows: 2fr 1fr; /* First row 100px, second row 200px, third row takes the remaining space */
@@ -21,10 +22,17 @@ html, body {
 }
 
 .row-1 {
-    /* grid-template-columns: repeat(3, 1fr);
-    height: 100vh; /* Full viewport height 
-    gap: 10px; /* Space between grid items
-    padding: 10px; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns*/
+    gap: 10px; /* Space between grid items */
+    padding: 10px 10px 0px 10px;
+}
+
+.row-2{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 10px;
+    padding: 0px 10px 10px 10px;
 }
 
 .grid-item{
@@ -33,9 +41,17 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
-    border-radius: 8px;
+    font-size: 24px; 
+    /* border-radius: 8px; */
 }
 
 
+.red{
+    grid-row: span 2;
+    background-color: red;
+}
+.purple{
+    grid-row: span 2;
+    
+}
 
