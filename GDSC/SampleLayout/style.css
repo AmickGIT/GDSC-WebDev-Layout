@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns
+    
+    /* Unequal row heights */
+    grid-template-rows: 2fr 1fr; /* First row 100px, second row 200px, third row takes the remaining space */
+    
+    height: 100vh; /* Full viewport height */
+    gap: 10px; /* Space between grid items */
+    padding: 10px;
+}
+
+.row-1 {
+    /* grid-template-columns: repeat(3, 1fr);
+    height: 100vh; /* Full viewport height 
+    gap: 10px; /* Space between grid items
+    padding: 10px; */
+}
+
+.grid-item{
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 8px;
+}
+
+
+
