@@ -1,3 +1,12 @@
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +20,8 @@ html, body {
 
 .grid-container {
     display: grid;
-    
-    
     /* Unequal row heights */
-    grid-template-rows: 2fr 1fr; /* First row 100px, second row 200px, third row takes the remaining space */
-    
+    grid-template-rows: 2fr 1fr; 
     height: 100vh; /* Full viewport height */
     gap: 10px; /* Space between grid items */
     padding: 10px;
@@ -36,8 +42,6 @@ html, body {
 }
 
 .grid-item{
-    /* background-color: #4CAF50; */
-    /* color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,25 +52,51 @@ html, body {
 
 .red{
     grid-row: span 2;
-    background-color: rgb(244,45,85); 
+    background-color: rgb(244,45,85);
+    border-top-left-radius: 10px; 
 }
 
 .peach{
     background-color: rgb(250,225,215);
+    font-family: 'Varela Round';
+    font-size: 2em;
 }
 
 .black{
-    background-color: black;
+    background-color: rgb(26, 26, 26);
     color: white;
+    font-family: cursive;
+    font-size: 3em;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 .purple{
     grid-row: span 2;
     background-color: rgb(185,180,255);
+    border-top-right-radius: 10px;
 }
 .green{
     background-color: rgb(167,250,170);
+    font-weight: bold;
+    font-size: 3em;
+    border-bottom-left-radius: 10px;
 }
 .peach-corner{
     background-color: rgb(250,225,215);
+    font-size: 2em;
+    font-style: oblique;
+    font-family: cursive;
+    font-weight: bold;
+    border-bottom-right-radius: 10px;
 }
 
+.pencil {
+    font-size: 40px; /* Increase icon size */
+    color: white; /* Pencil icon color */
+}
+
+.incognito {
+    font-size: 40px; /* Increase icon size */
+    color: rgb(63, 63, 63); /* Pencil icon color */
+}
