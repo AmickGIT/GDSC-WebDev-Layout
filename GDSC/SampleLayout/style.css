@@ -36,8 +36,8 @@ html, body {
 }
 
 .grid-item{
-    background-color: #4CAF50;
-    color: white;
+    /* background-color: #4CAF50; */
+    /* color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,10 +48,24 @@ html, body {
 
 .red{
     grid-row: span 2;
-    background-color: red;
+    background-color: red; 
+}
+
+.peach{
+    background-color: peachpuff;
+}
+
+.black{
+    background-color: black;
 }
 .purple{
     grid-row: span 2;
-    
+    background-color: purple;
+}
+.green{
+    background-color: green;
+}
+.peach-corner{
+    background-color: peachpuff;
 }
 
