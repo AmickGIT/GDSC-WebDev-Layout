@@ -5,7 +5,7 @@
     to {
       text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
-  }
+}
 
 * {
     margin: 0;
@@ -65,8 +65,9 @@ html, body {
 .black{
     background-color: rgb(26, 26, 26);
     color: white;
-    font-family: cursive;
+    font-family: 'Pacifico', 'Brush Script MT', cursive;
     font-size: 3em;
+    font-weight: 100;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
