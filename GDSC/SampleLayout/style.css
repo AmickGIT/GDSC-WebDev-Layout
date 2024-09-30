@@ -7,6 +7,21 @@
     }
 }
 
+@-webkit-keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* General reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,86 +33,108 @@ html, body {
     background-color: black;
 }
 
+/* Grid container setup */
 .grid-container {
     display: grid;
-    /* Unequal row heights */
-    grid-template-rows: 2fr 1fr; 
-    height: 100vh; /* Full viewport height */
-    gap: 10px; /* Space between grid items */
+    grid-template-rows: 2fr 1fr;
+    height: 100vh;
+    gap: 10px;
     padding: 10px;
 }
 
 .row-1 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns*/
-    gap: 10px; /* Space between grid items */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     padding: 10px 10px 0px 10px;
 }
 
-.row-2{
+.row-2 {
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 10px;
     padding: 0px 10px 10px 10px;
 }
 
-.grid-item{
+.grid-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px; 
-    /* border-radius: 8px; */
+    font-size: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Add hover effect */
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 
-.red{
+/* Background and text colors for individual items */
+.red {
     grid-row: span 2;
-    background-color: rgb(244,45,85);
-    border-top-left-radius: 10px; 
+    background-color: rgb(244, 45, 85);
+    border-top-left-radius: 10px;
 }
 
-.peach{
-    background-color: rgb(250,225,215);
+.peach {
+    background-color: rgb(250, 225, 215);
     font-family: 'Varela Round';
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-.black{
+.black {
     background-color: rgb(26, 26, 26);
     color: white;
     font-family: 'Pacifico', 'Brush Script MT', cursive;
     font-size: 3em;
     font-weight: 100;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
-.purple{
+
+.purple {
     grid-row: span 2;
-    background-color: rgb(185,180,255);
+    background-color: rgb(185, 180, 255);
     border-top-right-radius: 10px;
+    transition: box-shadow 0.5s ease, transform 0.3s ease; /* Added transition */
 }
-.green{
-    background-color: rgb(167,250,170);
+
+
+
+.green {
+    background-color: rgb(167, 250, 170);
     font-weight: bold;
     font-size: 3em;
     border-bottom-left-radius: 10px;
 }
-.peach-corner{
-    background-color: rgb(250,225,215);
-    font-size: 2em;
+
+.peach-corner {
+    background-color: rgb(250, 225, 215);
+    font-size: 2.5em;
     font-style: oblique;
     font-family: cursive;
     font-weight: bold;
     border-bottom-right-radius: 10px;
 }
 
+/* Special effects for icons */
 .pencil {
     font-size: 40px; /* Increase icon size */
     color: white; /* Pencil icon color */
+    /* Removed pulse animation */
 }
+.pencil:hover {
+    color: rgb(210, 209, 209);
+}
+
 
 .incognito {
     font-size: 40px; /* Increase icon size */
-    color: rgb(63, 63, 63); /* Pencil icon color */
+    color: rgb(96, 96, 96);
+    transition: color 0.3s ease;
+}
+
+/* On hover, change the color of the incognito icon */
+.incognito:hover {
+    color: black;
 }
